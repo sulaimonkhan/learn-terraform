@@ -10,13 +10,13 @@ variable "instances" {
     "mongodb",
     "rabbitmq",
     "redis"
-  ]    
+  ]
 }
 
-resource  "aws_instance" "instances" {
-  count = length(var.instances)  
-  ami            = "ami-09c813fb71547fc4f"
-  instance_type  = "t3.small"
+resource "aws_instance" "instance" {
+  count = length(var.instances)
+  ami           = "ami-09c813fb71547fc4f"
+  instance_type = "t3.small"
   vpc_security_group_ids = ["sg-074f03a20cc158368"]
   tags = {
     Name = var.instances[count.index]
