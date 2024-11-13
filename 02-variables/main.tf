@@ -29,12 +29,12 @@ variable "str1" {
 # Numbers , Booleans $ strings
 
 variable "list1" {
-    default = [
-        10,
-        20,
-        "xyz"
-        false
-    ]
+  default = [
+    10,
+    20,
+    "xyz"
+    false
+  ]
 }
 
 
