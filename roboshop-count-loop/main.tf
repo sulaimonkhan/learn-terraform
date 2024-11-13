@@ -24,7 +24,7 @@ resource  "aws_instance" "instances" {
 }
 
 resource "aws_route53_record" "record" {
-  count = length(var.instances)  
+  count = length(var.instances)
   zone_id = "Z0069852OQ5LT6MOSANJ"
   name    = "${var.instances[count.index]}-dev.sulaimondevopsb72.online"
   type    = "A"
