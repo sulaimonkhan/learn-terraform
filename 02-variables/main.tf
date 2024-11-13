@@ -28,15 +28,19 @@ variable "str1" {
 
 # Numbers , Booleans $ strings
 
+# Variable types
+variable "str2" {
+  default = "World"
+}
+
 variable "list1" {
   default = [
     10,
     20,
-    "xyz"
+    "xyz",
     false
   ]
 }
-
 
 # List can have combination of multiple data types also
 
