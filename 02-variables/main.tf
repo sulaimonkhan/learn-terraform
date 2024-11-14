@@ -63,6 +63,7 @@ output "list_1" {
 
 output "map1_aws_trainer" {
     value = var.map1["aws"]["trainer"]
+    #value = var.map1["aws"].trainer 
 }
 
 
