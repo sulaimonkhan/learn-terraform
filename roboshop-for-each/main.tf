@@ -3,7 +3,7 @@ variable "instances" {
     frontend = {}
     cart = {}
     catalogue = {}    
-    user {}
+    user = {}
     shipping = {}   
     payment = {}
     mysql = {}
