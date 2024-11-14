@@ -1,16 +1,16 @@
 module "roboshop" {
-  for_each = var.instance
+  for_each = var.instances
   source = "./module"
-  component_name = each.key    
+  component_name = each.key
 }
 
 variable "instances" {
   default = {
     frontend = {}
     cart = {}
-    catalogue = {}    
+    catalogue = {}
     user = {}
-    shipping = {}   
+    shipping = {}
     payment = {}
     mysql = {}
     mongodb = {}
