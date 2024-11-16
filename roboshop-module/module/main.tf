@@ -9,7 +9,7 @@ resource "aws_instance" "instance" {
 
 resource "aws_route53_record" "record" {
   zone_id = "Z0069852OQ5LT6MOSANJ"
-  name    = "${var.component_name}-dev.rsulaimondevopsb72.online"
+  name    = "${var.component_name}-dev.sulaimondevopsb72.online"
   type    = "A"
   ttl     = "30"
   records = [aws_instance.instance.private_ip]
