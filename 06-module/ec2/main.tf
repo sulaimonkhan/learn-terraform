@@ -8,4 +8,4 @@ resource "aws_instance" "instance" {
 }
 
 
-variable "instannce_name" {}
+variable "instance_name" {}
