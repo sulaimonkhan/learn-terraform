@@ -12,3 +12,7 @@ data "vault_kv_secret_v2" "example" {
    mount = "test"    
 }
 
+resource "local_file" "foo" {
+  content  = data.vault_kv_secret_v2.example
+  filename = "/tmp/secret"
+}
