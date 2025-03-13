@@ -17,6 +17,6 @@ data "vault_generic_secret" "example" {
 #}
 
 resource "local_file" "foo" {
-  content  = data.vault_kv_secret_v2.example.data_json["password"]
+  content  = data.vault_generic_secret.example.data_json["password"]
   filename = "/tmp/secret"
 } 
