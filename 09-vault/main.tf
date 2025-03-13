@@ -1,7 +1,7 @@
 provider "vault" {
-   address = "https://   
-   token   = var.vault_token
-   skip_tls_verify = true
+  address = "https://172.31.40.195:8200"
+  token   = var.vault_token
+  skip_tls_verify = true
 }
 
 
@@ -12,7 +12,3 @@ data "vault_kv_secret_v2" "example" {
    mount = "test"    
 }
 
-resource "local_file" "foo" {
-   content  = data.vault_kv_secret_v2.example
-   filename = "/tmp/secret"   
-}
