@@ -1,5 +1,5 @@
 provider "vault" {
-  address = "https://172.31.40.195:8200"
+  address = "https://172.31.7.95:8200"
   token   = var.vault_token
   skip_tls_verify = true
 }
@@ -20,3 +20,4 @@ resource "local_file" "foo" {
   content  = data.vault_generic_secret.example.data["password"]
   filename = "/tmp/secret"
 } 
+
